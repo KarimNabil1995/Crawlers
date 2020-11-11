@@ -1,5 +1,4 @@
 from selenium import webdriver
-import requests
 from selenium.webdriver import Chrome
 import json
 import pandas as pd
@@ -127,7 +126,7 @@ for name in names:
         print('Active website is: {}'.format(op_website))
         print('Active twitter is: {}'.format(Twitter))
         print('Active LinkedIn is: {}'.format(LinkedIn))
-        print('Operating status is {}'.format(operating_stat))
+        print('Operating status is {}'.format(operating_status))
         print('Crunchbase url is {}'.format(link))
     except:
         pass
