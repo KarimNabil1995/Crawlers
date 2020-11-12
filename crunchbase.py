@@ -21,7 +21,7 @@ driver.implicitly_wait(2)
 column_names = ['Entity_Name', 'Website']
 df = pd.read_excel('test.xlsx', names = column_names)
 
-names = df[0:3].Website.to_list()
+names = df.Website.to_list()
 
 
 url = 'https://google.com'
@@ -153,7 +153,7 @@ for name in names:
 try: 
     df = pd.DataFrame(list(zip(names_list,Crunch_links_list, All_locations_list, all_regions_list, All_industries_list, employees_list, Fdates_list, TW_list, LND_list, weblinks_list, oper_stat)), columns=['Company_Name', 'Crunchbase_Link', 'Headquarter_location', 'Headquarter_region', 'Industries', 'Num_Of_Employees','Foundation_Date', 'Twitter_Handle', 'LinkedIn_Handle', 'Operating_website', 'Operating_status'])
 
-    Crunchbase_data = df.to_csv('Crunchbase_data2.csv', index=False)
+    Crunchbase_data = df.to_csv('Crunchbase_dataPoints.csv', index=False)
 except:
     print('Last step not done')
 
